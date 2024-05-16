@@ -1,0 +1,158 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="viciamine.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+  <sources>
+
+    <!-- Trifolium/pratense/about_this_collection -->
+    <source name="Trifolium-pratense-description" type="lis-description" dump="true" >
+      <property name="dataSetName" value="Trifolium-pratense-description" />
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/pratense/about_this_collection/" />
+      <property name="dataSetDescription" value="Trifolium pratense organism and strain information." />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/pratense/about_this_collection" />
+    </source>
+
+    <!-- Trifolium/pratense/genomes/MilvusB.gnm2.gNmT -->
+    <source name="MilvusB.gnm2.gNmT" type="lis-genome" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/pratense/genomes/MilvusB.gnm2.gNmT/" />
+      <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
+      <property name="lis-genome.includes" value="README.MilvusB.gnm2.gNmT.yml,tripr.MilvusB.gnm2.gNmT.genome_main.fna.gz" />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/pratense/genomes/MilvusB.gnm2.gNmT"/>
+    </source>
+
+    <!-- Trifolium/pratense/annotations/MilvusB.gnm2.ann1.DFgp -->
+    <source name="MilvusB.gnm2.ann1.DFgp" type="lis-annotation" dump="true">
+	    <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/pratense/annotations/MilvusB.gnm2.ann1.DFgp/" />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/pratense/annotations/MilvusB.gnm2.ann1.DFgp"/>
+    </source>
+
+    <!-- Trifolium/subterraneum/about_this_collection -->
+    <source name="Trifolium-subterraneum-description" type="lis-description" dump="true" >
+      <property name="dataSetName" value="Trifolium-subterraneum-description" />
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/subterraneum/about_this_collection/" />
+      <property name="dataSetDescription" value="Trifolium subterraneum organism and strain information." />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/subterraneum/about_this_collection" />
+    </source>
+
+    <!-- Trifolium/subterraneum/genomes/Daliak.gnm2.VJZB -->
+    <source name="Daliak.gnm2.VJZB" type="lis-genome" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/subterraneum/genomes/Daliak.gnm2.VJZB/" />
+      <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
+      <property name="lis-genome.includes" value="README.Daliak.gnm2.VJZB.yml,trisu.Daliak.gnm2.VJZB.genome_main.fna.gz" />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/subterraneum/genomes/Daliak.gnm2.VJZB"/>
+    </source>
+
+    <!-- Trifolium/subterraneum/annotations/Daliak.gnm2.ann1.MFKF -->
+    <source name="Daliak.gnm2.ann1.MFKF" type="lis-annotation" dump="true">
+            <property name="dataSetUrl" value="https://data.legumeinfo.org/Trifolium/subterraneum/annotations/Daliak.gnm2.ann1.MFKF/" />
+      <property name="src.data.dir" location="/home/legumista/v2/Trifolium/subterraneum/annotations/Daliak.gnm2.ann1.MFKF"/>
+    </source>
+
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.fam1.M65K/ -->
+    <source name="legume.fam1.M65K" type="lis-genefamily" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.fam1.M65K/" />
+      <!--property name="src.data.dir" location="/home/legumista/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/-->
+      <property name="src.data.dir" location="/falafel/legumeinfo/rsyncd_datastore/v2/LEGUMES/Fabaceae/genefamilies/legume.fam1.M65K"/>
+    </source>
+
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.fam1.M65K/legume.fam1.M65K.trees_ML_rooted/ -->
+    <!--source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.fam1.M65K/" />
+      <property name="src.data.dir" location="/home/legumista/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+      <property name="src.data.dir" location="/falafel/legumeinfo/rsyncd_datastore/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+    </source-->
+
+    <!-- ######################### NON-LIS ######################### -->
+    
+    <!-- INTERPRO -->
+    <source name="interpro" type="interpro">
+      <property name="src.data.dir" location="/home/legumista/data/InterPro/"/>
+    </source>
+
+    <!-- InterPro2GO -->
+    <source name="interpro-go" type="interpro-go">
+      <property name="src.data.dir" location="/home/legumista/data/InterPro/ontology/"/>
+    </source>
+
+    <!-- Pfam terms -->
+    <source name="pfam-term" type="pfam-term">
+      <property name="src.data.dir" location="/home/legumista/data/Pfam/"/>
+    </source>
+
+    <!-- PANTHER terms -->
+    <source name="panther-term" type="panther-term">
+      <property name="src.data.dir" location="/home/legumista/data/PANTHER/"/>
+    </source>
+
+    <!-- gene ontology -->
+    <source name="go" type="go">
+      <property name="src.data.file" location="/home/legumista/data/gene-ontology/go-basic.obo"/>
+    </source>
+
+    <!-- sequence ontology -->
+    <source name="so" type="so">
+      <property name="src.data.file" location="/home/legumista/data/SO-Ontologies/Ontology_Files/so-simple.obo"/>
+    </source>
+
+    <!-- plant ontology -->
+    <source name="plant-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/plant-ontology/po.obo"/>
+      <property name="ontology.prefix" value="PO"/>
+      <property name="obo.ontology.name" value="Plant Ontology"/>
+      <property name="obo.ontology.url" value="http://planteome.org/"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="The Plant Ontology (PO) is a community resource consisting of standardized terms, definitions, and logical relations describing plant structures and development stages, augmented by a large database of annotations from genomic and phenomic studies."/>
+    </source>
+
+    <!-- plant trait ontology -->
+    <source name="plant-trait-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/plant-trait-ontology/to.obo"/>
+      <property name="ontology.prefix" value="TO"/>
+      <property name="obo.ontology.name" value="Plant Trait Ontology"/>
+      <property name="obo.ontology.url" value="http://www.obofoundry.org/ontology/to.html"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary of describe phenotypic traits in plants."/>
+    </source>
+
+    <!-- cowpea crop ontology -->
+    <!-- source name="cowpea-crop-ontology" type="obo">
+      <property name="src.data.file" location="/home/legumista/data/crop-ontology/CO_340.obo"/>
+      <property name="ontology.prefix" value="CO_340"/>
+      <property name="obo.ontology.name" value="Cowpea Crop Ontology"/>
+      <property name="obo.ontology.url" value="https://www.cropontology.org/ontology/CO_340/Cowpea"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary to describe crop traits in cowpea."/>
+    </source -->
+
+  </sources>
+
+  
+  <post-processing>
+
+    <!-- IM CORE -->
+    <post-process name="do-sources" />
+    <post-process name="create-utr-references"/>
+    <post-process name="create-intergenic-region-features"/>
+    <post-process name="populate-child-features"/>
+    <post-process name="create-gene-flanking-features"/>
+    <post-process name="transfer-sequences"/>
+
+    <!-- LIS -->
+    <post-process name="lis-create-genefamilytally"/>
+    <post-process name="lis-populate-gwasresult-markers"/>
+    <post-process name="lis-populate-marker-linkagegrouppositions"/>
+    <post-process name="lis-populate-qtl-genes"/>
+    <post-process name="lis-populate-qtl-markers"/>
+
+    <!-- VIEWS AND INDEXES -->
+    <post-process name="create-location-overlap-index" />
+    <post-process name="create-overlap-view" />
+    <post-process name="create-attribute-indexes" />
+    <post-process name="summarise-objectstore" />
+    <post-process name="create-autocomplete-index" />
+    <post-process name="create-search-index" />
+
+  </post-processing>
+  
+</project>
